@@ -36,6 +36,8 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    '~/plugins/utils/firebase.js',
+    { src: './plugins/utils/helpers', mode: 'client' }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -57,7 +59,8 @@ export default {
     '@nuxtjs/robots',
     // https://sitemap.nuxtjs.org/guide/setup
     '@nuxtjs/sitemap',
-    'bootstrap-vue/nuxt'
+    'bootstrap-vue/nuxt',
+    //'@nuxtjs/firebase'
   ],
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
@@ -93,6 +96,31 @@ export default {
       ]
     },
   },
+
+  /* firebase: {
+    apiKey: 'AIzaSyClKiFcco-YqZhgNh4fJz39ph176-ByPmw',
+    authDomain: 'base-datos-prueba-5b642.firebaseapp.com',
+    projectId: 'base-datos-prueba-5b642',
+    databaseURL: 'https://base-datos-prueba-5b642-default-rtdb.firebaseio.com',
+    storageBucket: 'base-datos-prueba-5b642.appspot.com',
+    messagingSenderId: '997970116745',
+    appId: '1:997970116745:web:b332f2b315906fa2e34658',
+    measurementId: 'G-BVS5RT3CFE',
+    services: {
+      auth: false,
+      firestore: false,
+      functions: false,
+      storage: false,
+      database: true,
+      messaging: false,
+      performance: false,
+      analytics: true,
+      remoteConfig: false
+    },
+    onFirebaseHosting: false
+  }, */
+
+
 
   //  Sitemap module configuration
   sitemap: {
