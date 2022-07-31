@@ -16,7 +16,7 @@ export default {
     },
     meta: [...metadataStatic(), ...metadataDynamic()],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/logos/favicon.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon-logo.ico' },
       // add montserrat font
       {
         rel: 'stylesheet',
@@ -66,7 +66,7 @@ export default {
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     icon: {
-      source: './static/icon.png',
+      source: './static/logos/logo-gibim.jpg',
       purpose: 'any'
     },
     meta: {
@@ -125,7 +125,7 @@ export default {
   //  Sitemap module configuration
   sitemap: {
     path: '/sitemap.xml',
-    hostname: process.env.BASE_URL,
+    hostname: 'http://localhost:3000',
     cacheTime: 1000 * 60 * 15,
     gzip: true,
     exclude: metadata.settings.disallow.split(','),

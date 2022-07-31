@@ -1,11 +1,11 @@
-const app = 'FourP'
+const app = 'GIBIM'
 const description = 'En FourP buscamos una mirada hacia lo diferente, transformando la educación actual y generando más oportunidades para nuestra comunidad.';
 
 module.exports = {
   settings: {
     robots: 'index, follow',
     disallow: '/dashboard', //  separate pages with commas
-    color: '#2AB4FC',
+    color: '#299C00',
     locale: 'es_CO',
     lang: 'es',
     // googleToken: process.env.GOOGLE_SITE_VERIFICATION_TOKEN,

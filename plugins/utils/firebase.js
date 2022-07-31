@@ -1,4 +1,5 @@
 import { initializeApp } from 'firebase/app';
+import { createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, signInWithEmailAndPassword, signOut } from 'firebase/auth';
 import { child, get, getDatabase, ref, set } from 'firebase/database';
 
 const config = {
@@ -14,5 +15,14 @@ const config = {
 const app = initializeApp(config)
 //firebase.firestore().settings({timestampsInSnapshots: true})
 const database = getDatabase(app)
-export { database, ref, set, child, get };
+export {
+  database,
+  ref,
+  set,
+  child,
+  get,
+  getAuth,
+  createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut,
+  GoogleAuthProvider
+};
 

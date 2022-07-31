@@ -11,9 +11,10 @@
         <span v-if="item && key" style="font-weight: 600">
           {{ key }}:
         </span>
-        <span v-if="item && key">
+        <span v-if="item && key && key !== 'References'">
           {{ item }}
         </span>
+        <a v-if="item && key && key == 'References'" :href="item" target="_blank">{{ item }}</a>
       </li>
     </ul>
   </main>
@@ -76,7 +77,8 @@ ul {
   margin-left: 1em;
   margin-top: 1em;
 }
-ul li span {
+ul li span,
+ul li a {
   font-size: 1.4em;
 }
 </style>
