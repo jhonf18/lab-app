@@ -1,14 +1,16 @@
 <template>
   <header class="header">
-    <div to="/">
-      <img src="~/static/logos/logo-gibim.jpg" alt="Logo" class="logo" id="logo-gibim">
+    <div>
+      <nuxt-link to="/">
+        <img src="~/static/logos/logo-gibim.jpg" alt="Logo" class="logo" id="logo-gibim">
+      </nuxt-link>
     </div>
 
     <h1 class="title">Grupo de investigación en Bioquimica y Microbiología</h1>
 
-    <div href="https://www.uis.edu.co/webUIS/es/index.jsp" target="_blank" >
+    <a href="https://www.uis.edu.co/webUIS/es/index.jsp" target="_blank" >
       <img src="~/static/logos/logo-uis.png" alt="Logo de la universidad industrial de santander" class="logo">
-    </div>
+    </a>
   </header>
 </template>
 
