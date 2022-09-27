@@ -1,6 +1,6 @@
 import { initializeApp } from 'firebase/app';
 import { createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, signInWithEmailAndPassword, signOut } from 'firebase/auth';
-import { child, get, getDatabase, ref, set } from 'firebase/database';
+import { child, get, getDatabase, ref, remove, set } from 'firebase/database';
 
 const config = {
   apiKey: 'AIzaSyClKiFcco-YqZhgNh4fJz39ph176-ByPmw',
@@ -15,6 +15,7 @@ const config = {
 const app = initializeApp(config)
 //firebase.firestore().settings({timestampsInSnapshots: true})
 const database = getDatabase(app)
+
 export {
   database,
   ref,
@@ -23,6 +24,8 @@ export {
   get,
   getAuth,
   createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut,
-  GoogleAuthProvider
+  GoogleAuthProvider,
+  getDatabase,
+  remove
 };
 

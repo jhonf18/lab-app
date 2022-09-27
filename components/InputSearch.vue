@@ -22,7 +22,7 @@
           <li @click="onClickLink" v-for="metabolito in results" :key="metabolito.PCID">
             <nuxt-link
               class="link-results" :to="'/results?PCID=' + metabolito.PCID">
-              {{ metabolito.Compound_Name }}
+              {{ metabolito.CompoundName }}
             </nuxt-link>
           </li>
         </ul>
@@ -47,13 +47,17 @@ export default {
 
       const search = this.$normalize(this.search.toLowerCase());
       this.results = data.filter( item => {
-        let searchBy;
+        let name = '';
         if (!Number(search)) {
-          searchBy = 'Organism'
+          if (item.literatures) {
+
+            name = this.$normalize(item.literatures[0].organism_type.toLocaleLowerCase());
+          } else {
+            name = '**--**'
+          }
         } else {
-          searchBy = 'PCID'
+          name = this.$normalize(item.PCID.toLocaleLowerCase());
         }
-        const name = this.$normalize(item[searchBy].toLocaleLowerCase());
         return name.includes(search);
       })
 
